@@ -26,7 +26,7 @@ require_once(get_template_directory().'/assets/functions/comments.php');
 require_once(get_template_directory().'/assets/functions/page-navi.php');
 
 // Setup initial pages and assign to main menu
-// require_once(get_template_directory().'/assets/functions/setup-pages.php');
+require_once(get_template_directory().'/assets/functions/setup-pages.php');
 
 
 // Adds support for multiple languages
@@ -48,46 +48,64 @@ require_once(get_template_directory().'/assets/functions/custom-post-type.php');
 // require_once(get_template_directory().'/assets/functions/admin.php');
 
 
-add_filter('um_countries_predefined_field_options','um_countries_predefined_field_options');
-function um_countries_predefined_field_options( $countries ) {
+function wpsx_5505_modify_uploaded_file_meta($meta, $file, $sourceImageType) {
 
-    $countries[] = array("XV" => "Xtland");
+    // Get the parent post ID, if there is one
+    if( isset($_REQUEST['post_id']) ) {
+        $post_id = $_REQUEST['post_id'];
+    } else {
+        $post_id = false;
+    }
 
-    return $countries;
+    // Only do this if we got the post ID--otherwise they're probably in
+    //  the media section rather than uploading an image from a post.
+    if($post_id && is_numeric($post_id)) {
+
+        // Get the post title
+        $post_title = get_the_title($post_id);
+        $post_caption = get_field('image_description', $post_id);
+
+        // If we found a title
+        if($post_title) {
+
+            $meta['title'] = $post_title . ' details';
+            $meta['caption'] = $post_caption;
+
+        }
+
+    }
+
+    return $meta;
+
 }
-// function Users() {
-//
-//   $blogusers = get_users( array( 'fields' => array('display_name', ID ) ) );
-//
-//   foreach ( $blogusers as $user ) {
-//     $name = $user->display_name;
-//     $a[$user->ID] = $name;
-//   }
-//
-//     return $a;
-// }
-//
-// function my_search_form() {
-//     $args = array();
-//     $args['debug'] = false;
-//     $args['wp_query'] = array('post_type' => 'post',
-//                               'posts_per_page' => 5);
-//     $args['fields'][] = array('type' => 'taxonomy',
-//                               'label' => 'Choose a category',
-//                               'taxonomy' => 'resource-category',
-//                               'format' => 'select',
-//                               'allow_null' => 'select');
-//     $args['fields'][] = array('type' => 'meta_key',
-//                               'label' => 'Choose an author',
-//                               'meta_key' => 'participants',
-//                               'format' => 'select',
-//                               'values' => Users(),
-//                               'data_type' => 'ARRAY<CHAR>',
-//                               'compare' => 'LIKE',
-//                               'allow_null' => 'select');
-//     $args['fields'][] = array( 'type' => 'submit',
-//                               'class' => 'btn',
-//                               'value' => 'Search' );
-//     register_wpas_form('my-form', $args);
-// }
-// add_action('init', 'my_search_form');
+add_filter('wp_read_image_metadata', 'wpsx_5505_modify_uploaded_file_meta', 1, 3);
+
+
+add_action( 'init', 'wpa4182_init');
+function wpa4182_init()
+{
+    global $wp_taxonomies;
+
+    // The list of labels we can modify comes from
+    //  http://codex.wordpress.org/Function_Reference/register_taxonomy
+    //  http://core.trac.wordpress.org/browser/branches/3.0/wp-includes/taxonomy.php#L350
+    $wp_taxonomies['post_tag']->labels = (object)array(
+        'name' => 'Contributors',
+        'menu_name' => 'Contributors',
+        'singular_name' => 'Contributor',
+        'search_items' => 'Search Contributors',
+        'popular_items' => 'Popular Contributors',
+        'all_items' => 'All Contributors',
+        'parent_item' => null, // Tags aren't hierarchical
+        'parent_item_colon' => null,
+        'edit_item' => 'Edit Contributor',
+        'update_item' => 'Update Contributor',
+        'add_new_item' => 'Add new Contributor',
+        'new_item_name' => 'New Contributor Name',
+        'separate_items_with_commas' => 'Separate Contributors with commas',
+        'add_or_remove_items' => 'Add or remove Contributors',
+        'choose_from_most_used' => 'Choose from the most used Contributors',
+    );
+
+    $wp_taxonomies['post_tag']->label = 'Contributors';
+}

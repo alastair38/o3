@@ -13,12 +13,11 @@ jQuery(document).ready(function() {
       menuWidth: 300
     }
   );
+    $('.materialboxed').materialbox();
   $('select').material_select();
 
  $('.modal-trigger').leanModal();
- $(".modal-trigger").click(function(){
-      $('.header').css('z-index', '89');
- });
+ 
 $(".dropdown-button").click(function(){
   $width = $("li.dropdown").width();
   $(".mdi-menu-down").toggleClass("rotate");
@@ -31,7 +30,7 @@ $(".field input[value='Report location']").addClass("btn");
 
 var options = [
     {selector: '#about-pathways', offset: 50, callback: 'Materialize.fadeInImage("#about-pathways")' },
-    {selector: '#gettingStarted', offset: 50, callback: 'Materialize.fadeInImage("#gettingStarted")' },
+    {selector: '#your-say', offset: 50, callback: 'Materialize.fadeInImage("#your-say")' },
     {selector: '.fixed-action-btn', offset: 50, callback: 'Materialize.fadeInImage(".fixed-action-btn")' }
 ];
 Materialize.scrollFire(options);

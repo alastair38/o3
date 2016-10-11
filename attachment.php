@@ -23,7 +23,6 @@ get_header(); ?>
 
 </div> <!-- end row -->
 
-
 </main> <!-- end main -->
 
 <?php get_footer(); ?>

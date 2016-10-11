@@ -33,15 +33,7 @@
 										wp_list_pages('title_li=');
 									}
 										?> -->
-									<?php $logo_image = get_theme_mod( 'tcx_logo_image' );
-				 				 if ($logo_image){
-
-									 ?>
-								
-
-								<?php } else {?>
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg">
-							<?php }?>
+							
 								<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a> &copy <?php echo date("Y");?>
 								</p>
 							</div>

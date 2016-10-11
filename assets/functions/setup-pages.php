@@ -60,7 +60,7 @@ function create_pages(){
 }
 
 // Sets 'Home' as the static front page
-$home = get_page_by_title( 'Pathways' );
+$home = get_page_by_title( 'Home' );
 update_option( 'page_on_front', $home->ID );
 update_option( 'show_on_front', 'page' );
 

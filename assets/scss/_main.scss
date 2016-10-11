@@ -302,31 +302,6 @@ a.dropdown-button.active {
 MODAL
 *********************/
 
-.modal {
-	width: 100%;
-	height: 100%;
-	max-height: 100%;
-	&.bottom-sheet {
-		max-height: 100%;
-		text-align: center;
-	}
-	&.modal-fixed-footer {
-		height: 100%;
-		max-height: 100%;
-	}
-  .collapsible, .collapsible-header, .collapsible-body {
-    border: none;
-    background: transparent;
-    font-size: 1.5rem;
-    font-weight: 300;
-  }
-
-  a.collapsible-header:after {
-    font-family: 'Material Design Icons';
-    padding-left:4px;
-    content: '\f144';
-  }
-}
 
 
 /*********************
@@ -341,41 +316,17 @@ ACF FORM OVERRIDES
 }
 }
 
-.acf_postbox p.label {
-  font-size: 14px;
-  color: $primary-color;
+.acf-label label {
+  text-transform: uppercase;
+  color: color("grey", "darken-3");
+  padding: 5px 0;
+  font-size: 1.25rem !important;
 }
 
-.acf_postbox input.select-dropdown {
-  padding: 5px 0 !important;
+.acf-fields > .acf-field {
+  border-top: none;
 }
 
-.acf-image-uploader .no-image {
-  color: transparent;
-  animation: show 2000ms 1;
-}
-
-input.add-image.btn {
-  position: absolute;
-  top: 0;
-  @media #{$small-and-down} {
-    position: relative;
-  }
-}
-
-.acf-google-map {
-  overflow: hidden;
-}
-
-.field {
-  padding-top: 2em !important;
-  padding-bottom: 2em !important;
-  label {
-    text-transform: uppercase;
-    font-size: 16px !important;
-    font-weight: 400 !important;
-  }
-}
 
 .inside {
   @extend .z-depth-1;
@@ -403,8 +354,19 @@ input.add-image.btn {
 POSTS & CONTENT STYLES
 *********************/
 
-.home .article-header h1 {
-  margin: 1em;
+.home .container {
+  article {
+  }
+
+}
+
+.hexagon {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  filter:blur(5px);
+    -webkit-clip-path: circle(50% at 50% 50%);
+clip-path: circle(50% at 50% 50%);
 }
 
 .key-pages {
@@ -615,7 +577,6 @@ h6.card-sub-title {
 }
 
 #gettingStarted {
-  opacity: 0;
   padding: 5em 1em 3em 1em;
   margin-bottom: 0;
   background: rgba(38,38,38,.85);
@@ -644,11 +605,10 @@ h6.card-sub-title {
   }
 }
 
-#about-pathways {
+#about-pathways, #your-say {
   opacity: 0;
   padding: 2em 0em;
   margin-bottom: 0;
-  background: rgba(255,255,255,.85);
   aside {
     padding: 1em 2em;
   }
@@ -729,6 +689,11 @@ h6.card-sub-title {
 		padding: 10px;
 		}
 
+}
+
+.home .entry-content {
+  font-size: 4rem;
+  font-weight: 100;
 }
 
 img.hide-on-med-and-up {

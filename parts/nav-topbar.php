@@ -11,7 +11,7 @@
 				 src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg"
 			 <?php }?>
 			  />
-				 <a href="<?php bloginfo('url'); ?>" class="brand-logo"><?php bloginfo('name'); ?></a>
+				 <a href="<?php bloginfo('url'); ?>" class="brand-logo center"><?php bloginfo('name'); ?></a>
 
 				  <!-- Uncomment this to use a slide-out side navigation on mobile. You will also have to comment out or remove "get_template_part( 'parts/content', 'offcanvas' )" in header.php
 

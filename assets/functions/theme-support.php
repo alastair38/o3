@@ -5,9 +5,15 @@ function joints_theme_support() {
 
 	// Add WP Thumbnail Support
 	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 200, 200 );
 
 	// Default thumbnail size
-	set_post_thumbnail_size(125, 125, true);
+
+	add_action('init', 'remove_plugin_image_sizes');
+
+function remove_plugin_image_sizes() {
+	remove_image_size('medium_large');
+}
 
 	// Add RSS Support
 	add_theme_support( 'automatic-feed-links' );

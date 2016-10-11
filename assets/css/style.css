@@ -1652,6 +1652,7 @@ CSS3 GRADIENTS.
   color: transparent !important; }
 
 /*** Colors ***/
+/*** Typography ***/
 /*** Badges ***/
 /*** Buttons ***/
 /*** Cards ***/
@@ -1669,7 +1670,6 @@ CSS3 GRADIENTS.
 /*** Tabs ***/
 /*** Tables ***/
 /*** Toasts ***/
-/*** Typography ***/
 /*** Collections ***/
 /* Progress Bar */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -2095,7 +2095,7 @@ ul {
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
-  border-left: 5px solid #ee6e73; }
+  border-left: 5px solid #FFFFFF; }
 
 i {
   line-height: inherit; }
@@ -2131,7 +2131,7 @@ video.responsive-video {
   .pagination li.active a {
     color: #fff; }
   .pagination li.active {
-    background-color: #ee6e73; }
+    background-color: #FFFFFF; }
   .pagination li.disabled a {
     cursor: default;
     color: #999; }
@@ -2549,7 +2549,6 @@ nav ul a span.badge {
 .no-select, input[type=range], input[type=range] + .thumb {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
@@ -3008,13 +3007,13 @@ nav ul a span.badge {
         left: 100%; } }
 
 nav {
-  color: #fff;
-  background-color: #ee6e73;
+  color: #616161;
+  background-color: #FFFFFF;
   width: 100%;
   height: 56px;
   line-height: 56px; }
   nav a {
-    color: #fff; }
+    color: #616161; }
   nav i,
   nav [class^="mdi-"], nav [class*="mdi-"],
   nav i.material-icons {
@@ -3039,7 +3038,7 @@ nav {
       line-height: 56px; }
   nav .brand-logo {
     position: absolute;
-    color: #fff;
+    color: #616161;
     display: inline-block;
     font-size: 2.1rem;
     padding: 0;
@@ -3073,7 +3072,7 @@ nav {
     nav ul a {
       transition: background-color .3s;
       font-size: 1rem;
-      color: #fff;
+      color: #616161;
       display: block;
       padding: 0 15px;
       cursor: pointer; }
@@ -3102,7 +3101,7 @@ nav {
         color: rgba(255, 255, 255, 0.7);
         transition: color .3s; }
       nav .input-field label.active i {
-        color: #fff; }
+        color: #616161; }
       nav .input-field label.active {
         transform: translateY(0); }
 
@@ -3447,8 +3446,6 @@ small {
   width: 100%;
   white-space: nowrap; }
   .tabs .tab {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
     display: block;
@@ -3465,7 +3462,7 @@ small {
     width: 15%;
     min-width: 80px; }
     .tabs .tab a {
-      color: #ee6e73;
+      color: #FFFFFF;
       display: block;
       width: 100%;
       height: 100%;
@@ -3473,15 +3470,15 @@ small {
       overflow: hidden;
       transition: color .28s ease; }
       .tabs .tab a:hover {
-        color: #f9c9cb; }
+        color: white; }
     .tabs .tab.disabled a {
-      color: #f9c9cb;
+      color: white;
       cursor: default; }
   .tabs .indicator {
     position: absolute;
     bottom: 0;
     height: 2px;
-    background-color: #f6b2b5;
+    background-color: white;
     will-change: left, right; }
 
 .material-tooltip {
@@ -4319,7 +4316,6 @@ textarea {
   line-height: 25px;
   font-size: 1rem;
   transition: .28s ease;
-  -khtml-user-select: none;
   /* webkit (konqueror) browsers */
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4947,7 +4943,7 @@ select {
 
 .side-nav .collapsible-body li.active,
 .side-nav.fixed .collapsible-body li.active {
-  background-color: #ee6e73; }
+  background-color: #FFFFFF; }
   .side-nav .collapsible-body li.active a,
   .side-nav.fixed .collapsible-body li.active a {
     color: #fff; }
@@ -10410,7 +10406,7 @@ main {
   width: 1px; }
 
 .screen-reader-text:focus {
-  background: #ee6e73;
+  background: #FFFFFF;
   color: white;
   box-shadow: none;
   border-bottom: 0 solid; }
@@ -10613,26 +10609,6 @@ ul#dropdown-1 li {
 /*********************
 MODAL
 *********************/
-.modal {
-  width: 100%;
-  height: 100%;
-  max-height: 100%; }
-  .modal.bottom-sheet {
-    max-height: 100%;
-    text-align: center; }
-  .modal.modal-fixed-footer {
-    height: 100%;
-    max-height: 100%; }
-  .modal .collapsible, .modal .collapsible-header, .modal .collapsible-body {
-    border: none;
-    background: transparent;
-    font-size: 1.5rem;
-    font-weight: 300; }
-  .modal a.collapsible-header:after {
-    font-family: 'Material Design Icons';
-    padding-left: 4px;
-    content: '\f144'; }
-
 /*********************
 ACF FORM OVERRIDES
 *********************/
@@ -10640,34 +10616,14 @@ ACF FORM OVERRIDES
   .acf-form .btn, .acf-form .btn-large {
     width: 100%; } }
 
-.acf_postbox p.label {
-  font-size: 14px;
-  color: #ee6e73; }
+.acf-label label {
+  text-transform: uppercase;
+  color: #424242;
+  padding: 5px 0;
+  font-size: 1.25rem !important; }
 
-.acf_postbox input.select-dropdown {
-  padding: 5px 0 !important; }
-
-.acf-image-uploader .no-image {
-  color: transparent;
-  animation: show 2000ms 1; }
-
-input.add-image.btn, input.add-image.btn-large {
-  position: absolute;
-  top: 0; }
-  @media only screen and (max-width: 600px) {
-    input.add-image.btn, input.add-image.btn-large {
-      position: relative; } }
-
-.acf-google-map {
-  overflow: hidden; }
-
-.field {
-  padding-top: 2em !important;
-  padding-bottom: 2em !important; }
-  .field label {
-    text-transform: uppercase;
-    font-size: 16px !important;
-    font-weight: 400 !important; }
+.acf-fields > .acf-field {
+  border-top: none; }
 
 .inside {
   margin-bottom: 2em; }
@@ -10686,8 +10642,14 @@ input.add-image.btn, input.add-image.btn-large {
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-.home .article-header h1 {
-  margin: 1em; }
+.hexagon {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%); }
 
 .key-pages {
   padding: 2em 3em;
@@ -10815,13 +10777,12 @@ h6.card-sub-title {
 
 .single #byline-locations {
   margin-bottom: 2em;
-  border-bottom: 4px solid #ee6e73; }
+  border-bottom: 4px solid #FFFFFF; }
 
 .fixed-action-btn {
   opacity: 0; }
 
 #gettingStarted {
-  opacity: 0;
   padding: 5em 1em 3em 1em;
   margin-bottom: 0;
   background: rgba(38, 38, 38, 0.85); }
@@ -10841,25 +10802,24 @@ h6.card-sub-title {
     #gettingStarted p#locationText {
       font-size: 1.05em; }
 
-#about-pathways {
+#about-pathways, #your-say {
   opacity: 0;
   padding: 2em 0em;
-  margin-bottom: 0;
-  background: rgba(255, 255, 255, 0.85); }
-  #about-pathways aside {
+  margin-bottom: 0; }
+  #about-pathways aside, #your-say aside {
     padding: 1em 2em; }
   @media only screen and (max-width: 600px) {
-    #about-pathways h3 {
+    #about-pathways h3, #your-say h3 {
       text-align: center; } }
   @media only screen and (max-width: 600px) {
-    #about-pathways .btn, #about-pathways .btn-large {
+    #about-pathways .btn, #about-pathways .btn-large, #your-say .btn, #your-say .btn-large {
       width: 100%; } }
-  #about-pathways p {
+  #about-pathways p, #your-say p {
     line-height: 1.75em;
     font-size: 1.3em;
     font-weight: 300; }
     @media only screen and (max-width: 600px) {
-      #about-pathways p {
+      #about-pathways p, #your-say p {
         font-size: 1.1em; } }
 
 .page-parent .entry-content p,
@@ -10911,6 +10871,10 @@ h6.card-sub-title {
   background: #eee;
   border: 1px solid #cecece;
   padding: 10px; }
+
+.home .entry-content {
+  font-size: 4rem;
+  font-weight: 100; }
 
 img.hide-on-med-and-up {
   width: 100%; }
@@ -11091,7 +11055,7 @@ textarea#comment:focus {
 
 a#cancel-comment-reply-link {
   display: block;
-  background: #ee6e73;
+  background: #FFFFFF;
   text-align: center;
   font-size: 1rem;
   text-transform: uppercase; }
