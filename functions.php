@@ -26,7 +26,7 @@ require_once(get_template_directory().'/assets/functions/comments.php');
 require_once(get_template_directory().'/assets/functions/page-navi.php');
 
 // Setup initial pages and assign to main menu
-require_once(get_template_directory().'/assets/functions/setup-pages.php');
+// require_once(get_template_directory().'/assets/functions/setup-pages.php');
 
 
 // Adds support for multiple languages
@@ -39,7 +39,7 @@ require_once(get_template_directory().'/assets/translation/translation.php');
 // require_once(get_template_directory().'/assets/functions/related-posts.php');
 
 // Use this as a template for custom post types
-require_once(get_template_directory().'/assets/functions/custom-post-type.php');
+//require_once(get_template_directory().'/assets/functions/custom-post-type.php');
 
 // Customize the WordPress login menu
 // require_once(get_template_directory().'/assets/functions/login.php');
@@ -79,33 +79,3 @@ function wpsx_5505_modify_uploaded_file_meta($meta, $file, $sourceImageType) {
 
 }
 add_filter('wp_read_image_metadata', 'wpsx_5505_modify_uploaded_file_meta', 1, 3);
-
-
-add_action( 'init', 'wpa4182_init');
-function wpa4182_init()
-{
-    global $wp_taxonomies;
-
-    // The list of labels we can modify comes from
-    //  http://codex.wordpress.org/Function_Reference/register_taxonomy
-    //  http://core.trac.wordpress.org/browser/branches/3.0/wp-includes/taxonomy.php#L350
-    $wp_taxonomies['post_tag']->labels = (object)array(
-        'name' => 'Contributors',
-        'menu_name' => 'Contributors',
-        'singular_name' => 'Contributor',
-        'search_items' => 'Search Contributors',
-        'popular_items' => 'Popular Contributors',
-        'all_items' => 'All Contributors',
-        'parent_item' => null, // Tags aren't hierarchical
-        'parent_item_colon' => null,
-        'edit_item' => 'Edit Contributor',
-        'update_item' => 'Update Contributor',
-        'add_new_item' => 'Add new Contributor',
-        'new_item_name' => 'New Contributor Name',
-        'separate_items_with_commas' => 'Separate Contributors with commas',
-        'add_or_remove_items' => 'Add or remove Contributors',
-        'choose_from_most_used' => 'Choose from the most used Contributors',
-    );
-
-    $wp_taxonomies['post_tag']->label = 'Contributors';
-}

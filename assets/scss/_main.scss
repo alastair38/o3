@@ -222,15 +222,13 @@ HEADER STYLES
   #logo {
     vertical-align: middle;
     margin-right: .5rem;
-    height: 40px;
+    height: 60px;
     width: auto;
-    animation: show 1000ms 1;
     @media #{$small-and-down} {
     	height: 25px;
   	}
   }
   .brand-logo {
-    animation: show 1000ms 1;
     @media #{$small-and-down} {
     	font-size: 1.25rem;
   	}
@@ -360,37 +358,6 @@ POSTS & CONTENT STYLES
 
 }
 
-.hexagon {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  filter:blur(5px);
-    -webkit-clip-path: circle(50% at 50% 50%);
-clip-path: circle(50% at 50% 50%);
-}
-
-.key-pages {
-  padding: 2em 3em;
-  margin-bottom: 2em;
-  opacity: .85;
-  border-radius: 5%;
-  border: 8px solid $secondary-color;
-}
-
-.um-header {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.um-member-name a{
-  color: $link-color;
-}
-
-
-.intro {
-  padding-bottom: 1em;
-}
-
 h3.side-title {
   font-size: 1.25em;
   padding: 1rem .5rem;
@@ -450,12 +417,14 @@ color: color("grey", "base");
 }
 
 body.home {
-  background: color("grey", "lighten-4");
+
   @media #{$medium-and-up} {
-  background: url('../images/frontpage.jpg') no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
+  background-color: #ffffff;
+  // background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPgoJPHJhZGlhbEdyYWRpZW50IGlkPSdnbG93JyBncmFkaWVudFVuaXRzPSd1c2VyU3BhY2VPblVzZScgY3g9JzI1MCcgY3k9JzIwMCcgcj0nMzUwJz4KCQk8c3RvcCBvZmZzZXQ9JzAlJyBzdG9wLWNvbG9yPScjNzc3JyAvPgoJCTxzdG9wIG9mZnNldD0nNjAlJyBzdG9wLWNvbG9yPScjNDQ0JyAvPgoJCTxzdG9wIG9mZnNldD0nMTAwJScgc3RvcC1jb2xvcj0nIzIyMicgLz4KCTwvcmFkaWFsR3JhZGllbnQ+Cgk8cmVjdCBmaWxsPSd1cmwoI2dsb3cpJyB4PSctMSUnIHk9Jy0xJScgZmlsbC1vcGFjaXR5PScwLjc1JyB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJy8+Cjwvc3ZnPg==);
+  // background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGNvdW50PScxMDAlJyBoZWlnaHQ9JzEwMCUnPgoJPGNpcmNsZSBjeD0nNTAlJyBjeT0nNTAlJyByPSc1JScgZmlsbC1vcGFjaXR5PScuMycgZmlsbD0nI0YwNTQ1QycgLz4KCTxjaXJjbGUgY3g9JzUwJScgY3k9JzUwJScgcj0nMTAlJyBmaWxsLW9wYWNpdHk9Jy4zJyBmaWxsPScjRjA1NDVDJyAvPgoJPGNpcmNsZSBjeD0nNTAlJyBjeT0nNTAlJyByPScxNSUnIGZpbGwtb3BhY2l0eT0nLjMnIGZpbGw9JyNGMDU0NUMnIC8+Cgk8Y2lyY2xlIGN4PSc1MCUnIGN5PSc1MCUnIHI9JzIwJScgZmlsbC1vcGFjaXR5PScuMycgZmlsbD0nI0YwNTQ1QycgLz4KCTxjaXJjbGUgY3g9JzUwJScgY3k9JzUwJScgcj0nMjUlJyBmaWxsLW9wYWNpdHk9Jy4zJyBmaWxsPScjRjA1NDVDJyAvPgoJPGNpcmNsZSBjeD0nNTAlJyBjeT0nNTAlJyByPSczMCUnIGZpbGwtb3BhY2l0eT0nLjMnIGZpbGw9JyNGMDU0NUMnIC8+Cgk8Y2lyY2xlIGN4PSc1MCUnIGN5PSc1MCUnIHI9JzM1JScgZmlsbC1vcGFjaXR5PScuMycgZmlsbD0nI0YwNTQ1QycgLz4KCTxjaXJjbGUgY3g9JzUwJScgY3k9JzUwJScgcj0nNDAlJyBmaWxsLW9wYWNpdHk9Jy4zJyBmaWxsPScjRjA1NDVDJyAvPgoJPGNpcmNsZSBjeD0nNTAlJyBjeT0nNTAlJyByPSc0NSUnIGZpbGwtb3BhY2l0eT0nLjMnIGZpbGw9JyNGMDU0NUMnIC8+Cgk8Y2lyY2xlIGN4PSc1MCUnIGN5PSc1MCUnIHI9JzUwJScgZmlsbC1vcGFjaXR5PScuMycgZmlsbD0nI0YwNTQ1QycgLz4KCTxjaXJjbGUgY3g9JzUwJScgY3k9Jy0xMCUnIHI9JzIwJScgZmlsbC1vcGFjaXR5PScuMicgZmlsbD0nIzA4MjM2NycgLz4KCTxjaXJjbGUgY3g9JzUwJScgY3k9Jy0xMCUnIHI9JzMwJScgZmlsbC1vcGFjaXR5PScuMicgZmlsbD0nIzA4MjM2NycgLz4KCTxjaXJjbGUgY3g9JzUwJScgY3k9Jy0xMCUnIHI9JzQwJScgZmlsbC1vcGFjaXR5PScuMicgZmlsbD0nIzA4MjM2NycgLz4KCTxjaXJjbGUgY3g9JzUwJScgY3k9Jy0xMCUnIHI9JzUwJScgZmlsbC1vcGFjaXR5PScuMicgZmlsbD0nIzA4MjM2NycgLz4KCTxjaXJjbGUgY3g9JzUwJScgY3k9Jy0xMCUnIHI9JzYwJScgZmlsbC1vcGFjaXR5PScuMicgZmlsbD0nIzA4MjM2NycgLz4KCTxjaXJjbGUgY3g9JzUwJScgY3k9Jy0xMCUnIHI9JzcwJScgZmlsbC1vcGFjaXR5PScuMicgZmlsbD0nIzA4MjM2NycgLz4KCTxjaXJjbGUgY3g9JzUwJScgY3k9Jy0xMCUnIHI9JzgwJScgZmlsbC1vcGFjaXR5PScuMicgZmlsbD0nIzA4MjM2NycgLz4KCTxjaXJjbGUgY3g9JzUwJScgY3k9Jy0xMCUnIHI9JzkwJScgZmlsbC1vcGFjaXR5PScuMicgZmlsbD0nIzA4MjM2NycgLz4KCTxjaXJjbGUgY3g9JzUwJScgY3k9Jy0xMCUnIHI9JzEwMCUnIGZpbGwtb3BhY2l0eT0nLjInIGZpbGw9JyMwODIzNjcnIC8+Cgk8Y2lyY2xlIGN4PScwJyBjeT0nMCcgcj0nMTAlJyBmaWxsLW9wYWNpdHk9Jy4yJyBmaWxsPScjRjA1NDVDJyAvPgoJPGNpcmNsZSBjeD0nMCcgY3k9JzAnIHI9JzIwJScgZmlsbC1vcGFjaXR5PScuMicgZmlsbD0nI0YwNTQ1QycgLz4KCTxjaXJjbGUgY3g9JzAnIGN5PScwJyByPSczMCUnIGZpbGwtb3BhY2l0eT0nLjInIGZpbGw9JyNGMDU0NUMnIC8+Cgk8Y2lyY2xlIGN4PScwJyBjeT0nMCcgcj0nNDAlJyBmaWxsLW9wYWNpdHk9Jy4yJyBmaWxsPScjRjA1NDVDJyAvPgoJPGNpcmNsZSBjeD0nMCcgY3k9JzAnIHI9JzUwJScgZmlsbC1vcGFjaXR5PScuMicgZmlsbD0nI0YwNTQ1QycgLz4KCTxjaXJjbGUgY3g9JzAnIGN5PScwJyByPSc2MCUnIGZpbGwtb3BhY2l0eT0nLjInIGZpbGw9JyNGMDU0NUMnIC8+Cgk8Y2lyY2xlIGN4PScwJyBjeT0nMCcgcj0nNzAlJyBmaWxsLW9wYWNpdHk9Jy4yJyBmaWxsPScjRjA1NDVDJyAvPgoJPGNpcmNsZSBjeD0nMTAwJScgY3k9JzAnIHI9JzEwJScgZmlsbC1vcGFjaXR5PScuMScgZmlsbD0nI2ZmZicgLz4KCTxjaXJjbGUgY3g9JzEwMCUnIGN5PScwJyByPScyMCUnIGZpbGwtb3BhY2l0eT0nLjEnIGZpbGw9JyNmZmYnIC8+Cgk8Y2lyY2xlIGN4PScxMDAlJyBjeT0nMCcgcj0nMzAlJyBmaWxsLW9wYWNpdHk9Jy4xJyBmaWxsPScjZmZmJyAvPgoJPGNpcmNsZSBjeD0nMTAwJScgY3k9JzAnIHI9JzQwJScgZmlsbC1vcGFjaXR5PScuMScgZmlsbD0nI2ZmZicgLz4KCTxjaXJjbGUgY3g9JzEwMCUnIGN5PScwJyByPSc1MCUnIGZpbGwtb3BhY2l0eT0nLjEnIGZpbGw9JyNmZmYnIC8+Cgk8Y2lyY2xlIGN4PScxMDAlJyBjeT0nMCcgcj0nNjAlJyBmaWxsLW9wYWNpdHk9Jy4xJyBmaWxsPScjZmZmJyAvPgoJPGNpcmNsZSBjeD0nMTAwJScgY3k9JzAnIHI9JzcwJScgZmlsbC1vcGFjaXR5PScuMScgZmlsbD0nI2ZmZicgLz4KCTxjaXJjbGUgY3g9JzEwMCUnIGN5PScxMDAlJyByPScxMCUnIGZpbGwtb3BhY2l0eT0nLjEnIGZpbGw9JyMwMDAnIC8+Cgk8Y2lyY2xlIGN4PScxMDAlJyBjeT0nMTAwJScgcj0nMjAlJyBmaWxsLW9wYWNpdHk9Jy4xJyBmaWxsPScjMDAwJyAvPgoJPGNpcmNsZSBjeD0nMTAwJScgY3k9JzEwMCUnIHI9JzMwJScgZmlsbC1vcGFjaXR5PScuMScgZmlsbD0nIzAwMCcgLz4KCTxjaXJjbGUgY3g9JzEwMCUnIGN5PScxMDAlJyByPSc0MCUnIGZpbGwtb3BhY2l0eT0nLjEnIGZpbGw9JyMwMDAnIC8+Cgk8Y2lyY2xlIGN4PScxMDAlJyBjeT0nMTAwJScgcj0nNTAlJyBmaWxsLW9wYWNpdHk9Jy4xJyBmaWxsPScjMDAwJyAvPgoJPGNpcmNsZSBjeD0nMTAwJScgY3k9JzEwMCUnIHI9JzYwJScgZmlsbC1vcGFjaXR5PScuMScgZmlsbD0nIzAwMCcgLz4KCTxjaXJjbGUgY3g9JzEwMCUnIGN5PScxMDAlJyByPSc3MCUnIGZpbGwtb3BhY2l0eT0nLjEnIGZpbGw9JyMwMDAnIC8+Cgk8Y2lyY2xlIGN4PScwJScgY3k9JzEwMCUnIHI9JzEwJScgZmlsbC1vcGFjaXR5PScuMScgZmlsbD0nIzA4MjM2NycgLz4KCTxjaXJjbGUgY3g9JzAlJyBjeT0nMTAwJScgcj0nMjAlJyBmaWxsLW9wYWNpdHk9Jy4xJyBmaWxsPScjMDgyMzY3JyAvPgoJPGNpcmNsZSBjeD0nMCUnIGN5PScxMDAlJyByPSczMCUnIGZpbGwtb3BhY2l0eT0nLjEnIGZpbGw9JyMwODIzNjcnIC8+Cgk8Y2lyY2xlIGN4PScwJScgY3k9JzEwMCUnIHI9JzQwJScgZmlsbC1vcGFjaXR5PScuMScgZmlsbD0nIzA4MjM2NycgLz4KCTxjaXJjbGUgY3g9JzAlJyBjeT0nMTAwJScgcj0nNTAlJyBmaWxsLW9wYWNpdHk9Jy4xJyBmaWxsPScjMDgyMzY3JyAvPgoJPGNpcmNsZSBjeD0nMCUnIGN5PScxMDAlJyByPSc2MCUnIGZpbGwtb3BhY2l0eT0nLjEnIGZpbGw9JyMwODIzNjcnIC8+Cgk8Y2lyY2xlIGN4PScwJScgY3k9JzEwMCUnIHI9JzcwJScgZmlsbC1vcGFjaXR5PScuMScgZmlsbD0nIzA4MjM2NycgLz4KPC9zdmc+);
+  ///background-size: cover;
+  //background-position: center center;
+  //background-attachment: fixed;
   }
 }
 
@@ -473,6 +442,28 @@ article section {
     padding: .5em 0;
   }
 }
+
+article .card-content a.btn {
+  margin-top: 1em;
+}
+
+article ul li {
+  font-size: 1.3em;
+  margin-left: 1em;
+  font-weight: 300;
+  list-style-type: disc;
+}
+
+.card {
+  height: 450px;
+}
+
+span.col.s5.posts_link {
+  background: color('grey', 'lighten-4');
+  text-align: center;
+  padding: .5em;
+}
+
 
 .single-title,
 .page-title {
@@ -577,9 +568,9 @@ h6.card-sub-title {
 }
 
 #gettingStarted {
-  padding: 5em 1em 3em 1em;
+  padding: 4em 0em 3em 0em;
   margin-bottom: 0;
-  background: rgba(38,38,38,.85);
+  color: color('grey', 'darken-2');
   aside {
     padding: 1em 2em;
   }
@@ -605,12 +596,16 @@ h6.card-sub-title {
   }
 }
 
-#about-pathways, #your-say {
+#about-o3, #your-say {
   opacity: 0;
-  padding: 2em 0em;
+  padding: 9em 3em 2em 3em;
   margin-bottom: 0;
-  aside {
-    padding: 1em 2em;
+  color: color('grey', 'darken-2');
+  .about-text {
+    font-size: 1.5em;
+    line-height: 1.75em;
+    font-weight: 300;
+    margin-bottom: 2em;
   }
   h3{
     @media #{$small-and-down} {
@@ -691,9 +686,12 @@ h6.card-sub-title {
 
 }
 
-.home .entry-content {
-  font-size: 4rem;
-  font-weight: 100;
+.home .entry-content p {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-top: 0;
+  color: color('grey', 'darken-2');
+
 }
 
 img.hide-on-med-and-up {
@@ -1133,8 +1131,7 @@ FOOTER STYLES
 }
 
 .page-footer {
-  background: $footer-bg-color;
-  @extend .white-text;
+  background: none;
   font-weight: 300;
   ul {
     font-size: 0; // this removes white space between li children for application of side borders. Margin needs to reapplied hence...
@@ -1149,7 +1146,6 @@ FOOTER STYLES
       padding: 5px 0;
     }
     a {
-      @extend .white-text;
       .mdi {
         border-radius: 50%;
         width: 1.75em;
@@ -1158,7 +1154,6 @@ FOOTER STYLES
       }
       &:hover, &:focus {
         .mdi {
-          @extend .white;
           color: $footer-bg-color;
         }
       }
@@ -1185,14 +1180,13 @@ FOOTER STYLES
         height: 12px;
     }
     a {
-      @extend .white-text;
       border-bottom: 1px dotted;
     }
   }
 }
 
 .home footer {
-  background: rgba(38,38,38,.85);
+  background: none;
 }
 
 /*********************

@@ -60,13 +60,13 @@ function create_pages(){
 }
 
 // Sets 'Home' as the static front page
-$home = get_page_by_title( 'Home' );
-update_option( 'page_on_front', $home->ID );
-update_option( 'show_on_front', 'page' );
+// $home = get_page_by_title( 'Home' );
+// update_option( 'page_on_front', $home->ID );
+// update_option( 'show_on_front', 'page' );
 
 // Sets 'Blog' as the blog page
-$blog   = get_page_by_title( 'Blog' );
-update_option( 'page_for_posts', $blog->ID );
+// $blog   = get_page_by_title( 'Blog' );
+// update_option( 'page_for_posts', $blog->ID );
 
 /*********************
 CREATE MENU ITEMS FROM SETUP PAGES AND ASSIGN THESE AS MAIN-NAV

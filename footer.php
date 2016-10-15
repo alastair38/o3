@@ -1,6 +1,6 @@
 					<footer id="contact" class="page-footer center" role="contentinfo">
 						<div id="inner-footer" class="container">
-							<h6>Contact Us</h6>
+							<h6 class="screen-reader-text">Contact Us</h6>
 							<ul class="col s12 l12">
 									<?php
 									$email_contact = get_theme_mod('tcx_email_contact');
@@ -33,7 +33,7 @@
 										wp_list_pages('title_li=');
 									}
 										?> -->
-							
+
 								<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a> &copy <?php echo date("Y");?>
 								</p>
 							</div>
