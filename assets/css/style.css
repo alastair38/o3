@@ -3342,7 +3342,7 @@ small {
       margin: 0;
       color: inherit; }
     .card .card-content .card-title {
-      line-height: 48px; }
+      line-height: 28px; }
   .card .card-action {
     border-top: 1px solid rgba(160, 160, 160, 0.2);
     padding: 20px; }
@@ -10780,7 +10780,7 @@ article ul li {
   font-weight: 300;
   list-style-type: disc; }
 
-.card {
+.page-template-page-users .card {
   height: 450px; }
 
 span.col.s5.posts_link {
